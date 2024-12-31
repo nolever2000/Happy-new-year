@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chúc Mừng Năm Mới</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('https://example.com/background.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+            text-align: center;
+        }
+        h1 {
+            font-size: 3em;
+            margin-top: 50px;
+            text-shadow: 2px 2px 5px #000;
+        }
+        p {
+            font-size: 1.5em;
+            margin: 20px;
+        }
+        .fireworks {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+        .button {
+            background-color: #ff4081;
+            color: white;
+            padding: 10px 20px;
+            font-size: 1.2em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            margin-top: 30px;
+        }
+        .button:hover {
+            background-color: #e91e63;
+        }
+    </style>
+</head>
+<body>
+    <h1>Chúc Mừng Năm Mới!</h1>
+    <p>Chúc em yêu của anh một năm mới tràn đầy hạnh phúc, thành công, và luôn rạng ngời!</p>
+    <a class="button" href="#love">Xem món quà bất ngờ</a>
+    <canvas class="fireworks"></canvas>
+    <script src="https://cdn.jsdelivr.net/npm/fireworks-js@2/dist/fireworks.min.js"></script>
+    <script>
+        // Lấy đối tượng canvas để vẽ pháo hoa
+        const container = document.querySelector('.fireworks');
+        const fireworks = new Fireworks.default(container, { 
+            autoresize: true, // Tự động điều chỉnh kích thước canvas
+            acceleration: 1.05, 
+            friction: 0.98, 
+            gravity: 1.5, 
+            particles: 150, // Số lượng hạt mỗi lần bắn pháo hoa
+            traceSpeed: 3 // Tốc độ để lại vệt sáng
+        });
+        // Bắt đầu hiển thị pháo hoa
+        fireworks.start();
+    </script>
+</body>
+</html>
